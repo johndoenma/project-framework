@@ -35,7 +35,7 @@ CSS TABLE OF CONTENTS
     # SMOOTH SCROLLING
 
 # CUSTOM STYLING
-
+    # SECTION COLORS
 
 --------------------------------
 --------------------------------
@@ -54,17 +54,17 @@ CSS TABLE OF CONTENTS
     --color-text-body: rgb(0 0 0 / .8);
     --color-text-headings: rgb(0 0 0 / 1);
 
-    --color-links: blue;
-    --color-links-hover: darkblue;
-    --color-links-dark: blue;
-    --color-links-darker: darkblue;
-    --color-links-light: lightblue;
+    --color-links: orange;
+    --color-links-hover: darkorange;
+    --color-links-dark: orange;
+    --color-links-darker: darkorange;
+    --color-links-light: rgb(255, 239, 209);
     --color-links-lighter: white;
 
     --color-siteheader-background: transparent;
     --color-siteheader-links: var(--color-text-headings);
 
-    --color-hero-background: rgb(100 100 100);
+    --color-hero-background: rgb(34, 92, 186);
     --color-hero-text: rgb(255 255 255 / .8);
     --color-hero-headings: rgb(255 255 255 / 1);
 
@@ -630,6 +630,23 @@ section {
 
 }
 
+/* CENTERED CARDS */
+.centered-card-group {
+
+    display: flex;
+    justify-content: center;
+    gap: var(--unit-small);
+
+    .centered-card {
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: var(--unit-small);
+    }
+
+}
+
+
+
 /* ------------------- */
 /* -- ANIMATION -- */
 /* ------------------- */
@@ -637,4 +654,14 @@ section {
 /* ENABLE NATIVE SMOOTH SCROLLING */
 html {
     scroll-behavior: smooth;
+}
+
+
+/* ------------------- */
+/* -- CUSTOM STYLING -- */
+/* ------------------- */
+
+/* CUSTOM COLOR SECTIONS */
+.bg-lightgrey {
+    background-color: #efefef;
 }
