@@ -30,6 +30,8 @@ CSS TABLE OF CONTENTS
 
 # UI COMPONENTS
     # BUTTONS
+    # SWIPER CAROUSEL (CUSTOM)
+        # CUSTOM POLOROID HERO CAROUSEL
 
 # ANIMATION
     # SMOOTH SCROLLING
@@ -74,8 +76,8 @@ CSS TABLE OF CONTENTS
     --color-sitefooter-links: rgb(255 255 255);
 
     /*  DEFINE ALL FONTS USED HERE */
-    --font-body: system-ui, Helvetica, Arial, sans-serif;
-    --font-headings: system-ui, Helvetica, Arial, sans-serif;
+    --font-body: 'acumin-pro', Helvetica, Arial, sans-serif;
+    --font-headings: 'kepler-std-display', Georgia, 'Times New Roman', Times, serif;
 
     /* SIZING UNITS */
     --container-width: 1100px;
@@ -645,6 +647,49 @@ section {
     }
 
 }
+
+/* SWIPER */
+.swiper {
+    height: 80vh;
+   
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    /* MOVE LEFT ARROW LEFT  */
+    .swiper-button-prev {
+      left: auto;
+      right: 60px;
+      top: 80%;
+    }
+    .swiper-button-next {
+      left: auto;
+      right: 0;
+      top: 80%;
+    }
+    
+  }
+
+  /* CUSTOM HERO POLOROID CAROUSEL */
+  
+  /* ROTATE IMAGES */
+  .rotate-right-10 { rotate: 10deg; }
+  .rotate-right-15 { rotate: 15deg; }
+  .rotate-left-10 { rotate: -10deg; }
+  .rotate-left-15 { rotate: -15deg; }
+  
+  .hero:has(.poloroid) {
+    background-color: darkblue;
+    
+    img {
+      display: block;
+      border: 10px solid white;
+      scale: 1.2;
+    }
+    
+  }
 
 
 

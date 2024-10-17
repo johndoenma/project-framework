@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NMA Framework</title>
 
-    <!-- ADD ADOBE FONTS -->
-    <link rel="stylesheet" href="https://use.typekit.net/imp2bsl.css">
+    <!-- SWIPER CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
     <!-- MAIN CSS FILE -->
     <link rel="stylesheet" href="css/style.css">
@@ -44,21 +44,51 @@
     <main class="site-main">
 
         <section class="hero">
-            <div class="container">
 
-                <div class="row swapped">
-                    <div class="one-half">
-                        <img src="img/placeholder-2000x1500.png" alt="Hero Image Placeholder" width="2000" height="1500">
+            <!-- CAROUSEL IN BODY -->
+            <!-- Slider main container -->
+            <div class="swiper poloroid">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img src="http://fpoimg.com/300x250?text=Preview" alt="placeholder">
                     </div>
-                    <div class="one-half">
-                        <h1>Project Framework</h1>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non iste consectetur vel excepturi. Ipsa eveniet quo eum odit rerum? Neque!</p>
-                        <a href="#" class="button">Button</a>
-                        <a href="#section1" class="button">Go to Section 1</a>
+                    <div class="swiper-slide">
+                        <img src="http://fpoimg.com/300x250?text=Preview" alt="placeholder">
                     </div>
+                    <div class="swiper-slide rotate-left-10">
+                        <img src="http://fpoimg.com/300x250?text=Preview" alt="placeholder">
+                    </div>
+                    <div class="swiper-slide rotate-right-15">
+                        <img src="http://fpoimg.com/300x250?text=Preview" alt="placeholder">
+                    </div>
+                    <div class="swiper-slide rotate-left-15">
+                        <img src="http://fpoimg.com/300x250?text=Preview" alt="placeholder">
+                    </div>
+                    <div class="swiper-slide rotate-right-10">
+                        <img src="http://fpoimg.com/300x250?text=Preview" alt="placeholder">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="http://fpoimg.com/300x250?text=Preview" alt="placeholder">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="http://fpoimg.com/300x250?text=Preview" alt="placeholder">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="http://fpoimg.com/300x250?text=Preview" alt="placeholder">
+                    </div>
+                    ...
                 </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
 
             </div>
+
         </section>
 
         <section id="section1">
@@ -163,8 +193,45 @@
 
     </footer>
 
+    <!-- SWIPER JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <!-- MAIN JS FILE -->
     <script src="js/script.js"></script>
+
+
+    <script>
+
+        // INIT SWIPER
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            // direction: 'vertical',
+            loop: true,
+
+            // TURN ON AUTOPLAY
+            autoplay: {
+                delay: 5000
+            },
+
+            // MULTIPLE SLIDES PER VIEW
+            slidesPerView: 5,
+            spaceBetween: 30,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                // dynamicBullets: true,
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+        });
+
+    </script>
 
 </body>
 
