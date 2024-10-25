@@ -637,6 +637,7 @@ section {
 .centered-card-group {
 
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: var(--unit-small);
 
@@ -644,7 +645,8 @@ section {
         border: 1px solid #ccc;
         border-radius: 10px;
         padding: var(--unit-small);
-        min-width: 232px
+        /* min-width: 200px; */
+        max-width: 200px;
     }
 
 }
@@ -706,7 +708,7 @@ html {
 /* ONSCROLL TRIGGERED ANIMATION */
 .observe-me {
     opacity: 0;
-    transition: all 1s ease-out .5s;
+    transition: all .5s ease-out .5s;
 
     &[data-viewstate="active"] {
         opacity: 1;
@@ -714,29 +716,31 @@ html {
 
 }
 
-.animate-from-left {
-    translate: -20px 0px;
+@media (min-width: 768px) {
+    .animate-from-left {
+        translate: -20px 0px;
+        &[data-viewstate="active"] {
+            translate: 0 0;
+        }
+    }
+    .animate-from-right {
+        translate: 20px 0px;
+        &[data-viewstate="active"] {
+            translate: 0 0;
+        }
+    }
+}
+
+
+.animate-from-top {
+    translate: 0 -20px;
     &[data-viewstate="active"] {
         translate: 0 0;
     }
 }
 
-.animate-from-right {
-    translate: 20px 0px;
-    &[data-viewstate="active"] {
-        translate: 0 0;
-    }
-}
-
-.animate-from-upperleft {
-    translate: -20px -20px;
-    &[data-viewstate="active"] {
-        translate: 0 0;
-    }
-}
-
-.animate-from-lowerright {
-    translate: 20px 20px;
+.animate-from-bottom {
+    translate: 0 20px;
     &[data-viewstate="active"] {
         translate: 0 0;
     }
